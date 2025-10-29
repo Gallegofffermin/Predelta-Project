@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: sans-serif;
 }
 
 html, body {
@@ -89,20 +89,28 @@ body {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.static-box {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
+iframe{
+    width: 80%;
+    height: 1200px;
+}
+
 .static-box:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.030);
 }
 
 .titulo {
     margin-bottom: 15px;
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: #486849;
 }
 
 .imagen-container {
@@ -144,7 +152,7 @@ body {
 .action-button {
     display: inline-block;
     text-align: center; 
-    background-color: #333;
+    background-color: #486849;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -157,45 +165,32 @@ body {
 }
 
 .action-button:hover {
-    background-color: #555;
+    background-color: rgb(115, 197, 144);
 }
+
 
 .detalles-fijos {
     margin-top: 20px;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
     width: 80%;
     max-width: 800px;
 }
 
-#menu-senderos {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap;
+.detalle-sendero{
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-#menu-senderos button {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+.detalle-sendero:hover {
+    transform: scale(1.015);
 }
 
-#menu-senderos button:hover {
-    background-color: #555;
-}
 
 .detalle-sendero .imagen {
     clip-path: none;
     border-radius: 8px;
     object-fit: cover;
 }
+
+
 
 
 #main-footer {
@@ -225,6 +220,10 @@ body {
 
 .footer-left {
     text-align: left;
+    display: flex;
+    justify-items: center;
+    gap: 15px;
+    align-items: center;
 }
 
 .footer-center {
@@ -297,5 +296,10 @@ body {
 
     .texto {
         font-size: 14px;
+    }
+
+    iframe{
+        width: 80%;
+        width: 80%;
     }
 }
