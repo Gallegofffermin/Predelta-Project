@@ -165,7 +165,6 @@
     width: 300px;
     height: auto;
     border-radius: 10px;
-    flex-shrink: 0;
 }
 
 
@@ -303,3 +302,4 @@ html, body {
 
 
 /*----------------FOOTER----------------*/
+
