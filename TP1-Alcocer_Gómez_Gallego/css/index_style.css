@@ -8,8 +8,6 @@
 /*----------------HEADER----------------*/
 #main-header {
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     background-color: #486849;
     color: rgb(158, 192, 161);
@@ -302,4 +300,5 @@ html, body {
 
 
 /*----------------FOOTER----------------*/
+
 
