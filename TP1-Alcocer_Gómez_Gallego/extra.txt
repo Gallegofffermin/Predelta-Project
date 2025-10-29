@@ -1,0 +1,8 @@
+colores: principal
+	 rgb(158, 192, 161);
+	 secundario
+	 rgb(115, 197, 144);
+	 terciario
+	 rgb(46, 211, 68);
+fuente:  
+font-family: sans-serif;
