@@ -85,6 +85,7 @@ body {
     align-items: center;
     text-align: center;
     width: 100%;
+    margin: 2%;
     height: 100%;
     background-color: white;
     border-radius: 10px;
@@ -281,7 +282,7 @@ iframe{
     }
 
     .carrusel {
-        width: 90%;
+        width: 80%;
         padding: 20px;
     }
 
@@ -301,5 +302,23 @@ iframe{
     iframe{
         width: 80%;
         width: 80%;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 10px;
     }
 }
