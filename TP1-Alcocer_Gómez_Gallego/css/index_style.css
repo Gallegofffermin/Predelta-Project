@@ -16,6 +16,8 @@
     align-items: center;
     padding: 10px 0;
     z-index: 1000;
+    margin-bottom: 0px;
+
 }
 
 .logo {
@@ -46,18 +48,42 @@
 }
 
 #main-content {
-    padding-top: 130px;
+    padding-top: 0px;
 }
 /*----------------HEADER----------------*/
 
 /*----------------MAIN CONTENT----------------*/
-#welcome-section, .info-section {
-    background-color: white;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+/* ADD THIS NEW BLOCK: Makes the container the reference point */
+.main-title-container {
+    position: relative; /* All absolute children will be positioned relative to this */
+    overflow: hidden; /* Ensures absolute children don't cause scroll issues */
+    height: 50vh; /* Set a height for the container */
+    margin-top: 72px;
+    margin-bottom: 3vh;
+}
+
+/* Modify existing #title-image block */
+#title-image {
+    position: absolute; /* Kept absolute to fill the container */
+    width: 100%;
+    height: 100%; /* Changed to 100% to fill the height */
+    border-radius: 0px;
+    align-items: center;
+    object-fit: cover; /* Important for scaling */
+    z-index: 1;
+}
+
+/* Modify existing .welcome-section block */
+.welcome-section {
+    position: absolute;
+    z-index: 10;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -150%);
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 30px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
 .welcome-section h2 {
@@ -76,12 +102,18 @@
 
 
 .info-section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    max-width: 1200px;
     font-size: 24px;
     color: #486849;
     margin-bottom: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-
+    transition: box-shadow 0.6s, transform 0.6s;
+    border-radius: 8px;
+    padding: 10px;
 }
+
 
 
 
@@ -115,9 +147,6 @@
 
 /* Responsive */
 @media (max-width: 600px) {
-    #welcome-section, .info-section {
-        padding: 15px;
-    }
 
     .info-section h2 {
         font-size: 22px;
@@ -144,7 +173,30 @@
         flex-wrap: wrap;
         gap: 10px;
     }
+
+    .main-title-container {
+            height: 40vh; 
+        }
+        
+        .welcome-section {
+            /* Reduce padding and increase width for a better fit */
+            padding: 15px;
+            width: 75%; 
+            max-width: 100%; 
+            transform: translate(-50%, -100%);
+        }
+        
+        .welcome-section h2 {
+            /* Make the heading smaller */
+            font-size: 24px; 
+        }
+        
+        .welcome-section p {
+            /* Make the body text smaller */
+            font-size: 14px; 
+        }
 }
+
 
 
 
@@ -184,6 +236,7 @@
     height: auto;
     border-radius: 10px;
 }
+
 
 
 .card-text {
